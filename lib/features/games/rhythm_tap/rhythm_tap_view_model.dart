@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'dart:math';
 
+//TODO: adicionar o audio e o score no local storage e corrigir sistema de pontuação
 class RhythmTapViewModel extends ChangeNotifier {
   bool isPlaying = false;
   bool isGameOver = false;

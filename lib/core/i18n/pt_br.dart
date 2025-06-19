@@ -49,4 +49,6 @@ class PtBr implements Translation {
   String get minigameTapTheDot => 'Toque no Ponto';
   @override
   String get minigameRhythmTap => 'Rhythm Tap';
+  @override
+  String get minigameMazeRunner => 'Labirinto';
 }

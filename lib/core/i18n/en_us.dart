@@ -49,4 +49,6 @@ class EnUs implements Translation {
   String get minigameTapTheDot => 'Tap The Dot';
   @override
   String get minigameRhythmTap => 'Rhythm Tap';
+  @override
+  String get minigameMazeRunner => 'Maze Runner';
 }

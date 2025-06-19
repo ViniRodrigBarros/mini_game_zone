@@ -23,4 +23,5 @@ mixin Translation {
   String get minigamePong;
   String get minigameTapTheDot;
   String get minigameRhythmTap;
+  String get minigameMazeRunner;
 }
