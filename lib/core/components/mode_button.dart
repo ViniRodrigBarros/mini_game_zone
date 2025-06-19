@@ -21,14 +21,17 @@ class ModeButton extends StatelessWidget {
       child: Ink(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [color.withOpacity(0.9), color.withOpacity(0.7)],
+            colors: [
+              color.withValues(alpha: 0.9),
+              color.withValues(alpha: 0.7),
+            ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
           borderRadius: BorderRadius.circular(18),
           boxShadow: [
             BoxShadow(
-              color: color.withOpacity(0.18),
+              color: color.withValues(alpha: 0.18),
               blurRadius: 12,
               offset: const Offset(0, 4),
             ),

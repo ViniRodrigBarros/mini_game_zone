@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 class TicTacToeCell extends StatelessWidget {
@@ -24,20 +22,22 @@ class TicTacToeCell extends StatelessWidget {
         duration: const Duration(milliseconds: 200),
         decoration: BoxDecoration(
           color: value == ''
-              ? Colors.white.withOpacity(0.5)
+              ? Colors.white.withValues(alpha: 0.5)
               : (highlight
-                    ? secondary.withOpacity(0.8)
-                    : primary.withOpacity(0.8)),
+                    ? secondary.withValues(alpha: 0.8)
+                    : primary.withValues(alpha: 0.8)),
           borderRadius: BorderRadius.circular(16),
           boxShadow: [
             BoxShadow(
-              color: primary.withOpacity(0.10),
+              color: primary.withValues(alpha: 0.10),
               blurRadius: 8,
               offset: const Offset(0, 4),
             ),
           ],
           border: Border.all(
-            color: value == '' ? Colors.grey.withOpacity(0.2) : Colors.white,
+            color: value == ''
+                ? Colors.grey.withValues(alpha: 0.2)
+                : Colors.white,
             width: 2,
           ),
         ),

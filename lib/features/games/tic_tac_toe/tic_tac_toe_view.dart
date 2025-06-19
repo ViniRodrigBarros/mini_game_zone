@@ -60,11 +60,11 @@ class TicTacToeView extends TicTacToeViewModel {
           const SizedBox(height: 24),
           Container(
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.7),
+              color: Colors.white.withValues(alpha: 0.7),
               borderRadius: BorderRadius.circular(24),
               boxShadow: [
                 BoxShadow(
-                  color: primary.withOpacity(0.08),
+                  color: primary.withValues(alpha: 0.08),
                   blurRadius: 16,
                   offset: const Offset(0, 8),
                 ),

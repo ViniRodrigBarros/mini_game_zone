@@ -26,8 +26,8 @@ class MinigameButton extends StatelessWidget {
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                AppConstants.primaryColor.withOpacity(0.85),
-                Theme.of(context).colorScheme.secondary.withOpacity(0.85),
+                AppConstants.primaryColor.withValues(alpha: 0.85),
+                Theme.of(context).colorScheme.secondary.withValues(alpha: 0.85),
               ],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
@@ -35,12 +35,15 @@ class MinigameButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(24),
             boxShadow: [
               BoxShadow(
-                color: AppConstants.primaryColor.withOpacity(0.10),
+                color: AppConstants.primaryColor.withValues(alpha: 0.10),
                 blurRadius: 16,
                 offset: const Offset(0, 8),
               ),
             ],
-            border: Border.all(color: Colors.white.withOpacity(0.25), width: 2),
+            border: Border.all(
+              color: Colors.white.withValues(alpha: 0.25),
+              width: 2,
+            ),
           ),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(24),
@@ -56,7 +59,7 @@ class MinigameButton extends StatelessWidget {
                   children: [
                     Container(
                       decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(0.18),
+                        color: Colors.white.withValues(alpha: 0.18),
                         shape: BoxShape.circle,
                       ),
                       padding: const EdgeInsets.all(12),

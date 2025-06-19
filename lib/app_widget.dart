@@ -29,11 +29,9 @@ class _AppWidgetState extends State<AppWidget> {
           seedColor: AppConstants.primaryColor,
           primary: AppConstants.primaryColor,
           secondary: const Color(0xFF38BDF8), // Azul vibrante
-          background: const Color(0xFFF3F4F6), // Cinza claro
           surface: Colors.white,
           onPrimary: Colors.white,
           onSecondary: Colors.white,
-          onBackground: Color(0xFF1E293B),
           onSurface: Color(0xFF1E293B),
         ),
         scaffoldBackgroundColor: const Color(0xFFF3F4F6),
