@@ -21,6 +21,8 @@ class AppModule extends Module {
       ..child(HomePage.route, child: (context) => const HomePage())
       ..child(AppConfig.route, child: (context) => const AppConfig())
       //Games
+      ..child(MemoryGame.route, child: (context) => const MemoryGame())
+      ..child(Hangman.route, child: (context) => const Hangman())
       ..child(TicTacToe.route, child: (context) => const TicTacToe());
   }
 }

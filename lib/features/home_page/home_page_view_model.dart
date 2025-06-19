@@ -9,7 +9,7 @@ abstract class HomePageViewModel extends State<HomePage> {
     {
       'title': I18n.strings.minigameMemory,
       'icon': Icons.memory,
-      'route': '/memory_game',
+      'route': MemoryGame.route,
     },
     {'title': I18n.strings.minigameQuiz, 'icon': Icons.quiz, 'route': '/quiz'},
     {
