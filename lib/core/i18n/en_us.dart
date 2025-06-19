@@ -30,7 +30,7 @@ class EnUs implements Translation {
   @override
   String get minigameMemory => 'Memory Game';
   @override
-  String get minigameQuiz => 'Quiz';
+  String get minigameSnakeGame => 'Jogo da cobrinha';
   @override
   String get minigameHangman => 'Hangman';
   @override
@@ -43,4 +43,8 @@ class EnUs implements Translation {
   String get hangmanWin => 'Congratulations! You guessed: {word}';
   @override
   String get hangmanLose => 'You lost! The word was: {word}';
+  @override
+  String get minigamePong => 'Pong';
+  @override
+  String get minigameTapTheDot => 'Tap The Dot';
 }

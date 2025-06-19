@@ -11,7 +11,11 @@ abstract class HomePageViewModel extends State<HomePage> {
       'icon': Icons.memory,
       'route': MemoryGame.route,
     },
-    {'title': I18n.strings.minigameQuiz, 'icon': Icons.quiz, 'route': '/quiz'},
+    {
+      'title': I18n.strings.minigameSnakeGame,
+      'icon': Icons.sports_esports,
+      'route': SnakeGame.route,
+    },
     {
       'title': I18n.strings.minigameHangman,
       'icon': Icons.text_fields,
@@ -20,13 +24,23 @@ abstract class HomePageViewModel extends State<HomePage> {
     {
       'title': I18n.strings.minigameSudoku,
       'icon': Icons.grid_on,
-      'route': '/sudoku',
+      'route': Sudoku.route,
     },
     {'title': 'Flappy Bird', 'icon': Icons.flight, 'route': FlappyBird.route},
     {
       'title': I18n.strings.minigameTicTacToe,
       'icon': Icons.close,
       'route': TicTacToe.route,
+    },
+    {
+      'title': I18n.strings.minigamePong,
+      'icon': Icons.sports_tennis,
+      'route': '/Pong/',
+    },
+    {
+      'title': I18n.strings.minigameTapTheDot,
+      'icon': Icons.circle,
+      'route': '/TapTheDot/',
     },
     // Adicione mais minigames aqui
   ];

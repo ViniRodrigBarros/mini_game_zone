@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:mini_game_zone/core/components/minigame_button.dart';
-import 'package:mini_game_zone/core/i18n/i18n.dart';
-
 import '../../core/core.dart';
 import 'home_page_view_model.dart';
 
@@ -56,8 +53,8 @@ class HomePageView extends HomePageViewModel {
                     case MemoryGame.route:
                       title = I18n.strings.minigameMemory;
                       break;
-                    case '/quiz':
-                      title = I18n.strings.minigameQuiz;
+                    case SnakeGame.route:
+                      title = I18n.strings.minigameSnakeGame;
                       break;
                     case Hangman.route:
                       title = I18n.strings.minigameHangman;

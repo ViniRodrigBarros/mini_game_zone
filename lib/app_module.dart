@@ -24,6 +24,10 @@ class AppModule extends Module {
       ..child(FlappyBird.route, child: (context) => const FlappyBird())
       ..child(MemoryGame.route, child: (context) => const MemoryGame())
       ..child(Hangman.route, child: (context) => const Hangman())
-      ..child(TicTacToe.route, child: (context) => const TicTacToe());
+      ..child(Sudoku.route, child: (context) => const Sudoku())
+      ..child(SnakeGame.route, child: (context) => const SnakeGame())
+      ..child(TicTacToe.route, child: (context) => const TicTacToe())
+      ..child('/Pong/', child: (context) => const Pong())
+      ..child('/TapTheDot/', child: (context) => const TapTheDot());
   }
 }

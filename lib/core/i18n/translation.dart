@@ -13,11 +13,13 @@ mixin Translation {
   String get tttTurn;
   String get tttRestart;
   String get minigameMemory;
-  String get minigameQuiz;
+  String get minigameSnakeGame;
   String get minigameHangman;
   String get minigameSudoku;
   String get minigamePuzzle;
   String get minigameTicTacToe;
   String get hangmanWin;
   String get hangmanLose;
+  String get minigamePong;
+  String get minigameTapTheDot;
 }

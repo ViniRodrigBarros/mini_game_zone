@@ -30,7 +30,7 @@ class EsEs implements Translation {
   @override
   String get minigameMemory => 'Juego de Memoria';
   @override
-  String get minigameQuiz => 'Quiz';
+  String get minigameSnakeGame => 'Snake Game';
   @override
   String get minigameHangman => 'Ahorcado';
   @override
@@ -43,4 +43,8 @@ class EsEs implements Translation {
   String get hangmanWin => '¡Felicidades! Adivinaste: {word}';
   @override
   String get hangmanLose => '¡Perdiste! Era: {word}';
+  @override
+  String get minigamePong => 'Pong';
+  @override
+  String get minigameTapTheDot => 'Toca el Punto';
 }
