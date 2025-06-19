@@ -42,6 +42,11 @@ abstract class HomePageViewModel extends State<HomePage> {
       'icon': Icons.circle,
       'route': '/TapTheDot/',
     },
+    {
+      'title': I18n.strings.minigameRhythmTap,
+      'icon': Icons.music_note,
+      'route': '/RhythmTap/',
+    },
     // Adicione mais minigames aqui
   ];
 

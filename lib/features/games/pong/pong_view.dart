@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import './pong_view_model.dart';
 import 'package:mini_game_zone/core/app_constants.dart';
 import 'package:mini_game_zone/core/i18n/i18n.dart';
-import 'dart:math';
 
 class PongView extends PongViewModel {
   @override

@@ -47,4 +47,6 @@ class EsEs implements Translation {
   String get minigamePong => 'Pong';
   @override
   String get minigameTapTheDot => 'Toca el Punto';
+  @override
+  String get minigameRhythmTap => 'Rhythm Tap';
 }
