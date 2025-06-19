@@ -39,4 +39,8 @@ class EsEs implements Translation {
   String get minigamePuzzle => 'Rompecabezas';
   @override
   String get minigameTicTacToe => 'Tres en Raya';
+  @override
+  String get hangmanWin => '¡Felicidades! Adivinaste: {word}';
+  @override
+  String get hangmanLose => '¡Perdiste! Era: {word}';
 }

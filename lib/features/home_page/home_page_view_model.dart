@@ -15,18 +15,14 @@ abstract class HomePageViewModel extends State<HomePage> {
     {
       'title': I18n.strings.minigameHangman,
       'icon': Icons.text_fields,
-      'route': '/hangman',
+      'route': Hangman.route,
     },
     {
       'title': I18n.strings.minigameSudoku,
       'icon': Icons.grid_on,
       'route': '/sudoku',
     },
-    {
-      'title': I18n.strings.minigamePuzzle,
-      'icon': Icons.extension,
-      'route': '/puzzle',
-    },
+    {'title': 'Flappy Bird', 'icon': Icons.flight, 'route': FlappyBird.route},
     {
       'title': I18n.strings.minigameTicTacToe,
       'icon': Icons.close,

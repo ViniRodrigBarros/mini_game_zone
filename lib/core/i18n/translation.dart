@@ -18,4 +18,6 @@ mixin Translation {
   String get minigameSudoku;
   String get minigamePuzzle;
   String get minigameTicTacToe;
+  String get hangmanWin;
+  String get hangmanLose;
 }

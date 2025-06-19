@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import './hangman.dart';
 import 'dart:math';
+import 'package:mini_game_zone/core/i18n/i18n.dart';
+import 'words.dart';
 
 abstract class HangmanViewModel extends State<Hangman> {
-  static const List<String> _words = [
-    'FLUTTER',
-    'DART',
-    'MOBILE',
-    'WIDGET',
-    'STATE',
-    'GOOGLE',
-    'ANDROID',
-    'APPLE',
-  ];
+  List<String> get _currentWords {
+    final lang = I18n.instance.locale.languageCode;
+    if (lang == 'en') return HangmanWords.en;
+    if (lang == 'es') return HangmanWords.es;
+    return HangmanWords.pt;
+  }
+
   late String word;
   late List<String> guessed;
   late List<String> wrong;
@@ -24,9 +23,17 @@ abstract class HangmanViewModel extends State<Hangman> {
     _initGame();
   }
 
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // Se o idioma mudar, reinicia o jogo com palavras do novo idioma
+    _initGame();
+  }
+
   void _initGame() {
     final rand = Random();
-    word = _words[rand.nextInt(_words.length)];
+    final words = _currentWords;
+    word = words[rand.nextInt(words.length)];
     guessed = [];
     wrong = [];
     setState(() {});

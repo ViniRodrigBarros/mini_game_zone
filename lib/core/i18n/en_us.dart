@@ -39,4 +39,8 @@ class EnUs implements Translation {
   String get minigamePuzzle => 'Puzzle';
   @override
   String get minigameTicTacToe => 'Tic Tac Toe';
+  @override
+  String get hangmanWin => 'Congratulations! You guessed: {word}';
+  @override
+  String get hangmanLose => 'You lost! The word was: {word}';
 }

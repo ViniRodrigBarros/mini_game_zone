@@ -95,8 +95,8 @@ class HangmanView extends HangmanViewModel {
               if (isGameOver) ...[
                 Text(
                   isWin
-                      ? 'Parabéns! Você acertou: $word'
-                      : 'Você perdeu! Era: $word',
+                      ? I18n.strings.hangmanWin.replaceFirst('{word}', word)
+                      : I18n.strings.hangmanLose.replaceFirst('{word}', word),
                   style: TextStyle(
                     fontSize: 20,
                     color: isWin ? highlight : Colors.redAccent,

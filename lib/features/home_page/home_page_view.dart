@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:mini_game_zone/core/components/minigame_button.dart';
 import 'package:mini_game_zone/core/i18n/i18n.dart';
 
+import '../../core/core.dart';
 import 'home_page_view_model.dart';
 
 class HomePageView extends HomePageViewModel {
@@ -52,20 +53,20 @@ class HomePageView extends HomePageViewModel {
                   final minigame = minigames[index];
                   String title;
                   switch (minigame['route']) {
-                    case '/memory_game':
+                    case MemoryGame.route:
                       title = I18n.strings.minigameMemory;
                       break;
                     case '/quiz':
                       title = I18n.strings.minigameQuiz;
                       break;
-                    case '/hangman':
+                    case Hangman.route:
                       title = I18n.strings.minigameHangman;
                       break;
                     case '/sudoku':
                       title = I18n.strings.minigameSudoku;
                       break;
-                    case '/puzzle':
-                      title = I18n.strings.minigamePuzzle;
+                    case '':
+                      title = 'Flappy bird';
                       break;
                     case '/tic_tac_toe':
                       title = I18n.strings.minigameTicTacToe;

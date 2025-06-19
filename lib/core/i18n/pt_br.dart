@@ -39,4 +39,8 @@ class PtBr implements Translation {
   String get minigamePuzzle => 'Quebra-cabeça';
   @override
   String get minigameTicTacToe => 'Jogo da Velha';
+  @override
+  String get hangmanWin => 'Parabéns! Você acertou: {word}';
+  @override
+  String get hangmanLose => 'Você perdeu! Era: {word}';
 }
