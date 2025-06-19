@@ -1,0 +1,21 @@
+mixin Translation {
+  String get test;
+  String get settingsTitle;
+  String get languageLabel;
+  String get homeTitle;
+  String get splashLoading;
+  String get tttTitle;
+  String get tttChooseMode;
+  String get ttt1Player;
+  String get ttt2Players;
+  String get tttWinner;
+  String get tttDraw;
+  String get tttTurn;
+  String get tttRestart;
+  String get minigameMemory;
+  String get minigameQuiz;
+  String get minigameHangman;
+  String get minigameSudoku;
+  String get minigamePuzzle;
+  String get minigameTicTacToe;
+}
