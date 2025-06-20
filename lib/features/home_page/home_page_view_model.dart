@@ -54,12 +54,6 @@ abstract class HomePageViewModel extends State<HomePage> {
       ],
     },
     {
-      'title': I18n.strings.minigameSudoku,
-      'icon': Icons.grid_on,
-      'route': Sudoku.route,
-      'searchTerms': ['sudoku', 'sudoku game', 'jogo sudoku', 'juego sudoku'],
-    },
-    {
       'title': 'Flappy Bird',
       'icon': Icons.flight,
       'route': FlappyBird.route,
@@ -111,20 +105,7 @@ abstract class HomePageViewModel extends State<HomePage> {
         'punto',
       ],
     },
-    {
-      'title': I18n.strings.minigameRhythmTap,
-      'icon': Icons.music_note,
-      'route': '/RhythmTap/',
-      'searchTerms': [
-        'rhythm tap',
-        'ritmo',
-        'musica',
-        'música',
-        'music',
-        'rhythm',
-        'tap',
-      ],
-    },
+
     {
       'title': I18n.strings.minigameMazeRunner,
       'icon': Icons.explore,

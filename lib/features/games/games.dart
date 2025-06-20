@@ -6,5 +6,5 @@ export 'sudoku/sudoku.dart';
 export 'snake_game/snake_game.dart';
 export 'pong/pong.dart';
 export 'tap_the_dot/tap_the_dot.dart';
-export 'rhythm_tap/rhythm_tap.dart';
+
 export 'maze_runner/maze_runner.dart';

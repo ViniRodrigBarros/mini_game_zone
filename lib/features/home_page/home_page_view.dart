@@ -125,9 +125,6 @@ class HomePageView extends HomePageViewModel {
                                 case '/tic_tac_toe':
                                   title = I18n.strings.minigameTicTacToe;
                                   break;
-                                case '/RhythmTap/':
-                                  title = I18n.strings.minigameRhythmTap;
-                                  break;
                                 case '/MazeRunner/':
                                   title = I18n.strings.minigameMazeRunner;
                                   break;

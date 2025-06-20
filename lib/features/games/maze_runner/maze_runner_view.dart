@@ -5,6 +5,7 @@ import 'package:mini_game_zone/core/i18n/i18n.dart';
 
 class MazeRunnerView extends StatefulWidget {
   const MazeRunnerView({super.key});
+  static const route = '/MazeRunner/';
 
   @override
   State<MazeRunnerView> createState() => _MazeRunnerViewState();
