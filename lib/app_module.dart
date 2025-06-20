@@ -29,6 +29,7 @@ class AppModule extends Module {
       ..child(TicTacToe.route, child: (context) => const TicTacToe())
       ..child(Pong.route, child: (context) => const Pong())
       ..child(TapTheDot.route, child: (context) => const TapTheDot())
-      ..child(MazeRunnerView.route, child: (context) => const MazeRunnerView());
+      ..child(MazeRunnerView.route, child: (context) => const MazeRunnerView())
+      ..child(Tetris.route, child: (context) => const Tetris());
   }
 }

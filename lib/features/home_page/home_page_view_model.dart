@@ -120,6 +120,20 @@ abstract class HomePageViewModel extends State<HomePage> {
         'explorar',
       ],
     },
+    {
+      'title': 'Tetris',
+      'icon': Icons.extension,
+      'route': '/Tetris/',
+      'searchTerms': [
+        'tetris',
+        'puzzle',
+        'blocos',
+        'blocks',
+        'tetris game',
+        'jogo tetris',
+        'juego tetris',
+      ],
+    },
     // Adicione mais minigames aqui
   ];
 

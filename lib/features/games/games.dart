@@ -8,3 +8,4 @@ export 'pong/pong.dart';
 export 'tap_the_dot/tap_the_dot.dart';
 
 export 'maze_runner/maze_runner.dart';
+export 'tetris/tetris.dart';
