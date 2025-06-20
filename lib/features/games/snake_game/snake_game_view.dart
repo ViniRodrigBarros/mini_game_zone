@@ -146,70 +146,95 @@ class SnakeGameView extends SnakeGameViewModel {
             const SizedBox(height: 16),
             // Controles
             if (!isGameOver) ...[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  IconButton(
-                    icon: const Icon(Icons.arrow_upward),
-                    iconSize: 32,
-                    color: highlight,
-                    onPressed: () => changeDirection(Direction.up),
+              if (isPlaying) ...[
+                SizedBox(
+                  width: 180,
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          _buildDPadButton(
+                            icon: Icons.arrow_upward,
+                            onPressed: () => changeDirection(Direction.up),
+                            color: highlight,
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          _buildDPadButton(
+                            icon: Icons.arrow_back,
+                            onPressed: () => changeDirection(Direction.left),
+                            color: highlight,
+                          ),
+                          const SizedBox(width: 48),
+                          _buildDPadButton(
+                            icon: Icons.arrow_forward,
+                            onPressed: () => changeDirection(Direction.right),
+                            color: highlight,
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          _buildDPadButton(
+                            icon: Icons.arrow_downward,
+                            onPressed: () => changeDirection(Direction.down),
+                            color: highlight,
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  IconButton(
-                    icon: const Icon(Icons.arrow_back),
-                    iconSize: 32,
-                    color: highlight,
-                    onPressed: () => changeDirection(Direction.left),
-                  ),
-                  const SizedBox(width: 32),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: primary,
-                      foregroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 24,
-                        vertical: 12,
-                      ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16),
-                      ),
-                      textStyle: const TextStyle(
-                        fontFamily: 'Montserrat',
-                        fontWeight: FontWeight.bold,
-                      ),
+                ),
+              ],
+              if (!isPlaying) ...[
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: primary,
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 32,
+                      vertical: 16,
                     ),
-                    onPressed: isPlaying ? null : startGame,
-                    child: Text(isPlaying ? 'Jogando...' : 'Iniciar'),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    textStyle: const TextStyle(
+                      fontFamily: 'Montserrat',
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                  const SizedBox(width: 32),
-                  IconButton(
-                    icon: const Icon(Icons.arrow_forward),
-                    iconSize: 32,
-                    color: highlight,
-                    onPressed: () => changeDirection(Direction.right),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  IconButton(
-                    icon: const Icon(Icons.arrow_downward),
-                    iconSize: 32,
-                    color: highlight,
-                    onPressed: () => changeDirection(Direction.down),
-                  ),
-                ],
-              ),
+                  onPressed: isPlaying ? null : startGame,
+                  child: Text('Iniciar'),
+                ),
+              ],
             ],
           ],
         ),
       ),
+    );
+  }
+
+  Widget _buildDPadButton({
+    required IconData icon,
+    required VoidCallback onPressed,
+    required Color color,
+  }) {
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        shape: const CircleBorder(),
+        backgroundColor: color,
+        foregroundColor: Colors.white,
+        padding: const EdgeInsets.all(18),
+        elevation: 4,
+        shadowColor: color.withOpacity(0.2),
+      ),
+      onPressed: onPressed,
+      child: Icon(icon, size: 28),
     );
   }
 }

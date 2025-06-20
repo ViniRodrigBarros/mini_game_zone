@@ -26,7 +26,13 @@ abstract class SnakeGameViewModel extends State<SnakeGame> {
   }
 
   void _resetGame() {
-    snake = [const Point(5, 10), const Point(4, 10), const Point(3, 10)];
+    snake = [
+      const Point(5, 10),
+      const Point(4, 10),
+      const Point(3, 10),
+      const Point(2, 10),
+      const Point(1, 10),
+    ];
     direction = Direction.right;
     nextDirection = null;
     food = _randomFood();
@@ -74,24 +80,20 @@ abstract class SnakeGameViewModel extends State<SnakeGame> {
     Point<int> newHead;
     switch (direction) {
       case Direction.up:
-        newHead = Point(head.x, head.y - 1);
+        newHead = Point(head.x, (head.y - 1 + rows) % rows);
         break;
       case Direction.down:
-        newHead = Point(head.x, head.y + 1);
+        newHead = Point(head.x, (head.y + 1) % rows);
         break;
       case Direction.left:
-        newHead = Point(head.x - 1, head.y);
+        newHead = Point((head.x - 1 + cols) % cols, head.y);
         break;
       case Direction.right:
-        newHead = Point(head.x + 1, head.y);
+        newHead = Point((head.x + 1) % cols, head.y);
         break;
     }
-    // Colisão
-    if (newHead.x < 0 ||
-        newHead.x >= cols ||
-        newHead.y < 0 ||
-        newHead.y >= rows ||
-        snake.contains(newHead)) {
+    // Colisão com o próprio corpo
+    if (snake.contains(newHead)) {
       isGameOver = true;
       isPlaying = false;
       gameLoop?.cancel();
