@@ -15,6 +15,7 @@ class HomePageView extends HomePageViewModel {
             centerTitle: true,
             elevation: 0,
             backgroundColor: Theme.of(context).colorScheme.primary,
+            automaticallyImplyLeading: false,
             actions: [
               IconButton(
                 icon: const Icon(Icons.settings),
