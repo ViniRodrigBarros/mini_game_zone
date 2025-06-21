@@ -37,6 +37,41 @@ class AppConfigView extends AppConfigViewModel {
                 if (locale != null) changeLanguage(locale);
               },
             ),
+
+            const SizedBox(height: 32),
+
+            Text(
+              'Áudio',
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 16),
+            Card(
+              child: ListTile(
+                leading: Icon(
+                  isAudioPlaying ? Icons.volume_up : Icons.volume_off,
+                  color: isAudioPlaying ? Colors.green : Colors.grey,
+                ),
+                title: Text(
+                  isAudioPlaying
+                      ? 'Áudio de Fundo Ativo'
+                      : 'Áudio de Fundo Desativado',
+                ),
+                subtitle: Text(
+                  isAudioPlaying
+                      ? 'Música tocando em loop'
+                      : 'Clique para ativar a música',
+                ),
+                trailing: Switch(
+                  value: isAudioPlaying,
+                  onChanged: (value) {
+                    toggleBackgroundAudio();
+                  },
+                ),
+                onTap: () {
+                  toggleBackgroundAudio();
+                },
+              ),
+            ),
           ],
         ),
       ),

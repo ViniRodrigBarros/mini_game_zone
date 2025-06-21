@@ -9,7 +9,8 @@ class AppModule extends Module {
 
     i
       ..addSingleton<StorageManager>(() => StorageManager.instance)
-      ..addSingleton<NavigatorManager>(() => NavigatorManager.instance);
+      ..addSingleton<NavigatorManager>(() => NavigatorManager.instance)
+      ..addSingleton<AudioManager>(() => AudioManager.instance);
   }
 
   @override
