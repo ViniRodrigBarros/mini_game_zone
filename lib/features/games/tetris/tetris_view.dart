@@ -67,7 +67,7 @@ class TetrisView extends State<Tetris> {
                 // Área principal do jogo
                 Expanded(
                   child: Center(
-                    child: Container(
+                    child: SizedBox(
                       width: 250, // Reduced from 300
                       child: _buildGameboard(context, primary, highlight),
                     ),

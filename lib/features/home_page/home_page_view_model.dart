@@ -134,6 +134,20 @@ abstract class HomePageViewModel extends State<HomePage> {
         'juego tetris',
       ],
     },
+    {
+      'title': "Space Invaders",
+      'icon': Icons.rocket_launch,
+      'route': SpaceInvaders.route,
+      'searchTerms': [
+        'space invaders',
+        'space',
+        'invaders',
+        'alien',
+        'nave',
+        'shooter',
+        'tiro',
+      ],
+    },
     // Adicione mais minigames aqui
   ];
 

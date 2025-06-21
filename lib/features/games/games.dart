@@ -1,11 +1,11 @@
-export 'tic_tac_toe/tic_tac_toe.dart';
-export 'memory_game/memory_game.dart';
-export 'hangman/hangman.dart';
 export 'flappy_bird/flappy_bird.dart';
-export 'sudoku/sudoku.dart';
-export 'snake_game/snake_game.dart';
-export 'pong/pong.dart';
-export 'tap_the_dot/tap_the_dot.dart';
-
+export 'hangman/hangman.dart';
 export 'maze_runner/maze_runner.dart';
+export 'memory_game/memory_game.dart';
+export 'pong/pong.dart';
+export 'snake_game/snake_game.dart';
+export 'space_invaders/space_invaders.dart';
+export 'sudoku/sudoku.dart';
+export 'tap_the_dot/tap_the_dot.dart';
 export 'tetris/tetris.dart';
+export 'tic_tac_toe/tic_tac_toe.dart';

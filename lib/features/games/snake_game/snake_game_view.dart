@@ -231,7 +231,7 @@ class SnakeGameView extends SnakeGameViewModel {
         foregroundColor: Colors.white,
         padding: const EdgeInsets.all(18),
         elevation: 4,
-        shadowColor: color.withOpacity(0.2),
+        shadowColor: color.withValues(alpha: 0.2),
       ),
       onPressed: onPressed,
       child: Icon(icon, size: 28),
