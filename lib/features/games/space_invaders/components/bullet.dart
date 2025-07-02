@@ -2,7 +2,6 @@ import 'dart:ui';
 
 import 'package:flame/components.dart';
 import 'package:flame/collisions.dart';
-import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
 import 'package:mini_game_zone/features/games/space_invaders/space_invaders_view_model.dart';
 import 'invader.dart';

@@ -2,7 +2,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mini_game_zone/app_module.dart';
-import 'package:mini_game_zone/core/managers/audio_manager.dart.dart';
 
 import 'app_widget.dart';
 
