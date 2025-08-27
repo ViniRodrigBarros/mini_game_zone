@@ -67,7 +67,7 @@ abstract class HomePageViewModel extends State<HomePage> {
       ],
     },
     {
-      'title': I18n.strings.minigameTicTacToe,
+      'title': 'tic tac toe',
       'icon': Icons.close,
       'route': TicTacToe.route,
       'searchTerms': [
@@ -93,7 +93,7 @@ abstract class HomePageViewModel extends State<HomePage> {
       ],
     },
     {
-      'title': I18n.strings.minigameTapTheDot,
+      'title': 'tap the dot',
       'icon': Icons.circle,
       'route': '/TapTheDot/',
       'searchTerms': [
@@ -121,7 +121,7 @@ abstract class HomePageViewModel extends State<HomePage> {
       ],
     },
     {
-      'title': 'Tetris',
+      'title': 'PuzzleDrop',
       'icon': Icons.extension,
       'route': '/Tetris/',
       'searchTerms': [
@@ -132,6 +132,7 @@ abstract class HomePageViewModel extends State<HomePage> {
         'tetris game',
         'jogo tetris',
         'juego tetris',
+        'PuzzleDrop',
       ],
     },
     {

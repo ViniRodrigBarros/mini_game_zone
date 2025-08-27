@@ -30,7 +30,7 @@ class PtBr implements Translation {
   @override
   String get minigameMemory => 'Jogo da Memória';
   @override
-  String get minigameSnakeGame => 'Snake Game';
+  String get minigameSnakeGame => 'Jogo da Cobrinha';
   @override
   String get minigameHangman => 'Forca';
   @override

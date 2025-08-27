@@ -29,7 +29,7 @@ class TetrisView extends State<Tetris> {
     return Scaffold(
       backgroundColor: bg,
       appBar: AppBar(
-        title: const Text('Tetris'),
+        title: const Text('PuzzleDrop'),
         centerTitle: true,
         backgroundColor: primary,
         actions: [
@@ -63,12 +63,45 @@ class TetrisView extends State<Tetris> {
                     ],
                   ),
                 ),
-
+                /*
+                Column(
+                  children: [
+                    Text(
+                      'Próxima',
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                        color: primary,
+                        fontFamily: 'Montserrat',
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+             
+                    Container(
+                      width: 40,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(16),
+                        boxShadow: [
+                          BoxShadow(
+                            color: primary.withValues(alpha: 0.08),
+                            blurRadius: 8,
+                            offset: const Offset(0, 4),
+                          ),
+                        ],
+                      ),
+                      child: _buildNextPiecePreview(),
+                    ),
+                  ],
+                ),
+*/
                 // Área principal do jogo
                 Expanded(
                   child: Center(
                     child: SizedBox(
                       width: 250, // Reduced from 300
+
                       child: _buildGameboard(context, primary, highlight),
                     ),
                   ),
@@ -131,76 +164,67 @@ class TetrisView extends State<Tetris> {
     Color highlight,
   ) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 16.0),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           // Controles
           if (_viewModel.isPlaying && !_viewModel.isPaused)
-            Row(
-              children: [
-                _buildControlButton(
-                  icon: Icons.arrow_left,
-                  onPressed: () => _viewModel.movePiece(Direction.left),
-                  color: Colors.blue,
-                ),
-                const SizedBox(width: 8),
-                Column(
-                  children: [
-                    _buildControlButton(
-                      icon: Icons.rotate_right,
-                      onPressed: _viewModel.rotatePiece,
-                      color: Colors.purple,
-                    ),
-                    const SizedBox(height: 8),
-                    _buildControlButton(
-                      icon: Icons.arrow_downward,
-                      onPressed: () => _viewModel.movePiece(Direction.down),
-                      color: Colors.green,
-                    ),
-                  ],
-                ),
-                const SizedBox(width: 8),
-                _buildControlButton(
-                  icon: Icons.arrow_right,
-                  onPressed: () => _viewModel.movePiece(Direction.right),
-                  color: Colors.blue,
-                ),
-              ],
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 4),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      _buildControlButton(
+                        icon: Icons.rotate_left,
+                        onPressed: _viewModel.rotatePieceLeft,
+                        color: Colors.deepPurple,
+                        tooltip: 'Girar Esquerda',
+                      ),
+                      const SizedBox(width: 8),
+                      _buildControlButton(
+                        icon: Icons.rotate_right,
+                        onPressed: _viewModel.rotatePiece,
+                        color: Colors.purple,
+                        tooltip: 'Girar Direita',
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 8),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      _buildControlButton(
+                        icon: Icons.arrow_left,
+                        onPressed: () => _viewModel.movePiece(Direction.left),
+                        color: Colors.blue,
+                        tooltip: 'Mover Esquerda',
+                      ),
+                      const SizedBox(width: 8),
+                      _buildControlButton(
+                        icon: Icons.arrow_downward,
+                        onPressed: () => _viewModel.movePiece(Direction.down),
+                        color: Colors.green,
+                        tooltip: 'Descer',
+                      ),
+                      const SizedBox(width: 8),
+                      _buildControlButton(
+                        icon: Icons.arrow_right,
+                        onPressed: () => _viewModel.movePiece(Direction.right),
+                        color: Colors.blue,
+                        tooltip: 'Mover Direita',
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
 
           // Preview da próxima peça
-          Column(
-            children: [
-              Text(
-                'Próxima',
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold,
-                  color: primary,
-                  fontFamily: 'Montserrat',
-                ),
-              ),
-              const SizedBox(height: 8),
-              Container(
-                width: 80,
-                height: 80,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(16),
-                  boxShadow: [
-                    BoxShadow(
-                      color: primary.withValues(alpha: 0.08),
-                      blurRadius: 8,
-                      offset: const Offset(0, 4),
-                    ),
-                  ],
-                ),
-                child: _buildNextPiecePreview(),
-              ),
-            ],
-          ),
         ],
       ),
     );
@@ -277,7 +301,7 @@ class TetrisView extends State<Tetris> {
               Icon(Icons.extension, size: 64, color: highlight),
               const SizedBox(height: 16),
               const Text(
-                'Tetris',
+                'PuzzleDrop',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -456,18 +480,22 @@ class TetrisView extends State<Tetris> {
     required IconData icon,
     required VoidCallback onPressed,
     required Color color,
+    String? tooltip,
   }) {
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        shape: const CircleBorder(),
-        backgroundColor: color,
-        foregroundColor: Colors.white,
-        padding: const EdgeInsets.all(16),
-        elevation: 4,
-        shadowColor: color.withValues(alpha: 0.2),
+    return Tooltip(
+      message: tooltip ?? '',
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          shape: const CircleBorder(),
+          backgroundColor: color,
+          foregroundColor: Colors.white,
+          padding: const EdgeInsets.all(18),
+          elevation: 6,
+          shadowColor: color.withValues(alpha: 0.25),
+        ),
+        onPressed: onPressed,
+        child: Icon(icon, size: 28),
       ),
-      onPressed: onPressed,
-      child: Icon(icon, size: 24),
     );
   }
 }

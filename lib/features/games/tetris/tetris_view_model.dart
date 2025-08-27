@@ -8,6 +8,21 @@ enum TetrisPiece { I, O, T, S, Z, J, L }
 enum Direction { left, right, down }
 
 class TetrisViewModel extends ChangeNotifier {
+  void rotatePieceLeft() {
+    if (!isPlaying || isGameOver || isPaused) return;
+
+    final rotations = pieceDefinitions[currentPieceType]!;
+    final prevRotation =
+        (currentRotation - 1 + rotations.length) % rotations.length;
+    final rotatedPiece = rotations[prevRotation];
+
+    if (_isValidPosition(currentX, currentY, rotatedPiece)) {
+      currentRotation = prevRotation;
+      currentPiece = List.from(rotatedPiece);
+      notifyListeners();
+    }
+  }
+
   static const int rows = 20;
   static const int cols = 10;
   static const Duration initialTick = Duration(milliseconds: 500);

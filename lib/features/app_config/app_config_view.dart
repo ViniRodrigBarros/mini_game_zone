@@ -8,7 +8,7 @@ class AppConfigView extends AppConfigViewModel {
     final languages = [
       {'label': 'Português', 'locale': const Locale('pt', 'BR')},
       {'label': 'English', 'locale': const Locale('en', 'US')},
-      {'label': 'Español', 'locale': const Locale('es', 'ES')},
+      //{'label': 'Español', 'locale': const Locale('es', 'ES')},
     ];
     return Scaffold(
       appBar: AppBar(

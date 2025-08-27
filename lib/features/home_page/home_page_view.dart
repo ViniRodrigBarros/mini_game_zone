@@ -124,7 +124,7 @@ class HomePageView extends HomePageViewModel {
                                   title = 'Flappy bird';
                                   break;
                                 case '/tic_tac_toe':
-                                  title = I18n.strings.minigameTicTacToe;
+                                  title = I18n.strings.tttTitle;
                                   break;
                                 case '/MazeRunner/':
                                   title = I18n.strings.minigameMazeRunner;
