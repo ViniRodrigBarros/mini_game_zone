@@ -1,16 +1,49 @@
-# mini_game_zone
+#🎮 MiniGameZone
 
-A new Flutter project.
+MiniGameZone é um aplicativo mobile que reúne diversos minigames em uma única plataforma, proporcionando diversão rápida, acessível e dinâmica para todos os tipos de jogadores.
 
-## Getting Started
+O objetivo do projeto é criar uma zona de jogos rápidos, leves e envolventes, com foco em boa experiência do usuário, performance e arquitetura bem estruturada.
 
-This project is a starting point for a Flutter application.
+🚀 Sobre o Projeto
 
-A few resources to get you started if this is your first Flutter project:
+O MiniGameZone foi desenvolvido com foco em:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+🎯 Jogos rápidos e intuitivos
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+📱 Experiência fluida em dispositivos móveis
+
+⚡ Alta performance
+
+🧠 Arquitetura organizada e escalável
+
+🔄 Fácil adição de novos jogos
+
+A ideia é que o app funcione como um hub de minigames, onde o usuário pode escolher rapidamente um jogo e começar a jogar em poucos segundos.
+
+🕹️ Jogos Disponíveis (Exemplo)
+
+🧩 Jogo da Memória
+
+🐍 Snake
+
+🔢 Jogo de Reflexo
+
+🎲 Quiz Rápido
+
+🃏 Jogo de Cartas
+
+🧠 Desafios Lógicos
+
+(A estrutura permite adicionar novos jogos facilmente.)
+
+🏗️ Arquitetura
+
+O projeto foi estruturado pensando em:
+
+Separação de responsabilidades
+
+Organização por módulos
+
+Reutilização de componentes
+
+Escalabilidade
